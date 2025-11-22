@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  background-color: var(--shape-background);
+}
+
+:root {
+  /* Pink */
+  --pink-light: #C59DD2;
+  --pink-base: #9547A5;
+  --pink-dark: #7D298A;
+  --pink-low:  #3F0F41;
+
+
+  /* Blue */
+  --blue-light: #73B6D2;
+  --blue-base:  #358BB9;
+  --blue-mid:   #2374A4;
+  --blue-dark:  #144A72;
+  --blue-low:   #08233C;
+
+  /* Shape */
+  --shape-stroke:      #002347;
+  --shape-hover:       #001933;
+  --shape-base:        #000F1F;
+  --shape-background:  #00050A;
+
+  /* Text */
+  --text-title: #F8FBFB;
+  --text-body:  #E2E7E9;
+  --text-label: #BAC6C9;
+
+/* Titles */
+  --title-lg: bold 3rem "Raleway", sans-serif;
+  --title-md: bold 2.5rem "Raleway", sans-serif;
+  --title-sm: bold 2rem "Raleway", sans-serif;
+  --title-xs: bold 1rem "Raleway", sans-serif;
+
+  /* Subtitle */
+  --subtitle: bold 2rem "Raleway", sans-serif;
+
+  /* Body */
+  --body-lg: normal 1.25rem/140% "Raleway", sans-serif;
+  --body-md: normal 1rem/140% "Raleway", sans-serif;
+  --body-sm: normal 0.875rem/140% "Raleway", sans-serif;
+  --body-xs: normal 0.75rem/140% "Raleway", sans-serif;
+
+  /* Button */
+  --button: bold 0.875rem "Raleway", sans-serif;
+
+  /* Link */
+  --link: 500 0.875rem "Raleway", sans-serif;
+
+  /* Tag */
+  --tag: bold 0.625rem "Raleway", sans-serif;
+  --tag-transform: uppercase;
+  --tag-letter-spacing: 5%;
+
+}
+
+h1{
+  font: var(--title-lg);
+  color: var(--text-title);
+}
+h2,span{
+  font: var(--subtitle);
+  color: var(--text-title);
+}

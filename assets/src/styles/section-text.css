@@ -1,0 +1,120 @@
+/* ==== Estrutura Principal ==== */
+.section-text {
+  margin: 96px 85px 120px;
+  padding: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.text-info {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 600px;
+}
+
+h2 {
+  width: 75rem;
+}
+
+/* ==== Texto ==== */
+.textpart {
+  display: inline;
+  opacity: 0.5;
+  animation: Opacity 500ms ease both;
+  animation-play-state: paused; /* não toca até o hover */
+}
+
+.textpartone { animation-delay: 0s; }
+.textparttwo { animation-delay: 1s; }
+.textpartthre { animation-delay: 2s; }
+
+/* ==== Spans com destaque ==== */
+.span {
+  animation: changeColor 500ms ease forwards;
+  animation-play-state: paused;
+}
+
+.supresy-book {
+  top: 0;
+  right: -15;
+  animation-delay: 0s;
+}
+
+.brindes {
+  animation-delay: 1s;
+}
+
+.encantadora {
+  animation-delay: 2s;
+}
+
+/* ==== Ícones ==== */
+.icon-section {
+  position: absolute;
+  opacity: 0;
+  animation: fadeIn  400ms ease forwards;
+  animation-play-state: paused;
+}
+
+.img1 {
+  right: 50%;
+  bottom: 70%;
+  animation-delay: 0s;
+}
+
+.img2 {
+  left: 10%;
+  bottom: 30%;
+  animation-delay: 1s;
+}
+
+.img3 {
+  right: 10%;
+  bottom: 30%;
+  animation-delay: 2s;
+}
+
+/* ==== Interações ==== */
+.text-info:hover .textpart {
+  animation-play-state: running;
+}
+
+.text-info:hover .icon-section {
+  animation-play-state: running;
+}
+
+.text-info:hover .span {
+  animation-play-state: running;
+}
+
+.icon-section:hover {
+  transform: scale(1.2) rotate(40deg);
+}
+
+/* ==== Animações ==== */
+@keyframes fadeIn {
+  0% {
+    transform: opacity(0);
+  }
+  100% {
+    transform: opacity(1);
+  }
+}
+
+@keyframes changeColor {
+  0% {}
+  100% {
+    color: var(--blue-light);
+  }
+}
+
+@keyframes Opacity {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
