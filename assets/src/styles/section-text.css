@@ -22,7 +22,7 @@ h2 {
 .textpart {
   display: inline;
   opacity: 0.5;
-  animation: Opacity 500ms ease both;
+  animation: Opacity 400ms  ease forwards ;
   animation-play-state: paused; /* não toca até o hover */
 }
 
@@ -32,7 +32,7 @@ h2 {
 
 /* ==== Spans com destaque ==== */
 .span {
-  animation: changeColor 500ms ease forwards;
+  animation: changeColor 400ms ease forwards ;
   animation-play-state: paused;
 }
 
@@ -52,28 +52,28 @@ h2 {
 
 /* ==== Ícones ==== */
 .icon-section {
-  position: absolute;
   opacity: 0;
-  animation: fadeIn  400ms ease forwards;
+  position: absolute;
+  animation: fadeIn 400ms ease forwards;
   animation-play-state: paused;
 }
 
 .img1 {
+  animation-delay: 0s;
   right: 50%;
   bottom: 70%;
-  animation-delay: 0s;
 }
 
 .img2 {
+  animation-delay: 1s;
   left: 10%;
   bottom: 30%;
-  animation-delay: 1s;
 }
 
 .img3 {
+  animation-delay: 2s;
   right: 10%;
   bottom: 30%;
-  animation-delay: 2s;
 }
 
 /* ==== Interações ==== */
@@ -95,11 +95,13 @@ h2 {
 
 /* ==== Animações ==== */
 @keyframes fadeIn {
-  0% {
-    transform: opacity(0);
+  from {
+    opacity: 0;
+    transform: translateY(8px);
   }
-  100% {
-    transform: opacity(1);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
