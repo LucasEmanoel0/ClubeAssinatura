@@ -22,46 +22,27 @@ h2 {
 .textpart {
   display: inline;
   opacity: 0.5;
-  animation: Opacity 400ms  ease forwards ;
-  animation-play-state: paused; /* não toca até o hover */
 }
 
-.textpartone { animation-delay: 0s; }
-.textparttwo { animation-delay: 1s; }
-.textpartthre { animation-delay: 2s; }
+
 
 /* ==== Spans com destaque ==== */
-.span {
-  animation: changeColor 400ms ease forwards ;
-  animation-play-state: paused;
-}
 
 .supresy-book {
   top: 0;
   right: -15;
-  animation-delay: 0s;
-}
-
-.brindes {
-  animation-delay: 1s;
-}
-
-.encantadora {
-  animation-delay: 2s;
 }
 
 /* ==== Ícones ==== */
 .icon-section {
   opacity: 0;
   position: absolute;
-  animation: fadeIn 400ms ease forwards;
-  animation-play-state: paused;
+  transition: opacity 400ms ease forwards;
 }
 
 .img1 {
-  animation-delay: 0s;
   right: 50%;
-  bottom: 70%;
+  bottom: 60%;
 }
 
 .img2 {
@@ -78,20 +59,39 @@ h2 {
 
 /* ==== Interações ==== */
 .text-info:hover .textpart {
-  animation-play-state: running;
+ animation: Opacity 400ms  ease forwards ;
 }
 
 .text-info:hover .icon-section {
-  animation-play-state: running;
+  animation: fadeIn 400ms ease forwards;
 }
 
 .text-info:hover .span {
-  animation-play-state: running;
+  animation: changeColor 400ms ease forwards ;
 }
+.text-info:hover .img1 {
+    animation-delay: 0s;
+    
+}
+.text-info:hover .img2 {
+    animation-delay: 1s;
+}
+.text-info:hover .img3 {
+    animation-delay: 2s;
+}
+.text-info:hover .supresy-book{
+    animation-delay: 0s;
+}
+.text-info:hover .brindes{
+    animation-delay: 1s;
+}
+.text-info:hover .encantadora{
+    animation-delay: 2s;
+}
+.text-info:hover .textpartone { animation-delay: 0s; }
+.text-info:hover .textparttwo { animation-delay: 1s; }
+.text-info:hover .textpartthre { animation-delay: 2s; }
 
-.icon-section:hover {
-  transform: scale(1.2) rotate(40deg);
-}
 
 /* ==== Animações ==== */
 @keyframes fadeIn {
